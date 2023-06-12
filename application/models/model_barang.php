@@ -43,4 +43,14 @@ class Model_barang extends CI_Model{
         }
     }
 
+    public function get_keyword($keyword){
+        $this->db->select('*');
+        $this->db->from('tb_barang');
+        $this->db->like('nama_brg', $keyword);
+        $this->db->or_like('keterangan', $keyword);
+        $this->db->or_like('kategori', $keyword);
+        $this->db->or_like('keterangan', $keyword);
+        return $this->db->get()->result();
+    }
+
 }

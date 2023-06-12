@@ -65,4 +65,13 @@ class Dashboard extends CI_Controller{
         $this->load->view('detail_barang', $data); 
         $this->load->view('templates/footer');
     }
+
+    public function search(){
+        $keyword = $this->input->post('keyword');
+        $data['barang'] = $this->model_barang->get_keyword($keyword);
+        $this->load->view('templates/header');
+        $this->load->view('templates/sidebar');
+        $this->load->view('dashboard', $data); 
+        $this->load->view('templates/footer');
+    }
 }
