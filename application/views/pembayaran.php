@@ -13,6 +13,7 @@
                 ?>
             </div><br><br>
             <h3>Input Alamat Pengiriman Dan Pembayaran</h3>
+            
             <form method="post" action="<?php echo base_url() ?>dashboard/proses_pesanan">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
@@ -29,7 +30,7 @@
                 <div class="form-group">
                     <label>Jasa Pengiriman</label><br>
                     <p style="color: red; font-size: 14px;">*Pengiriman menggunakan gojek dan grab hanya untuk daerah jabodetabek</p>
-                    <select class="form-control">
+                    <select class="form-control" name="jakir">
                         <option>JNE</option>
                         <option>TIKI</option>
                         <option>POS Indonesia</option>
@@ -40,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label>Pilih BANK</label>
-                    <select class="form-control">
+                    <select class="form-control" name="bank">
                         <option>BCA - XXXXXXXXXXXX</option>
                         <option>BNI - XXXXXXXXXXXX</option>
                         <option>BRI - XXXXXXXXXXXX</option>
