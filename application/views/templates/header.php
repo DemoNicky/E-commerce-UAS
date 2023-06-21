@@ -21,5 +21,17 @@
     <!-- Custom styles for this template-->
     <link href="<?php echo base_url() ?>assets/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> 
+    <style>
+        @media print{
+            @page{
+                margin-top: 30px;
+                margin-bootom: 10px;
+            }
+
+            .navbar-nav, .card, .btn, .handle, footer{
+                display: none;
+            }
+        }
+    </style>
 
 </head>
